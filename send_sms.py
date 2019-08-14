@@ -1,9 +1,9 @@
 from twilio.rest import Client
 
 # Your Account SID from twilio.com/console
-account_sid = "AC9dae5fbe48041a8914f62f3ac15e2528"
+account_sid = "XXXXXXXXXXXXXXXXXXX"
 # Your Auth Token from twilio.com/console
-auth_token  = "e1cd7e2a73d88c3b0e3bd92caca662d0"
+auth_token  = "XXXXXXXXXXXXXXXXXXX"
 
 client = Client(account_sid, auth_token)
 #if the number texts the twilio number add that number to list1
