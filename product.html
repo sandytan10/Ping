@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #65C7D0;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+/* @media only screen and (max-width: 600px) {#main {margin-left: 0}} */
+body {
+  font-family: Montserrat;
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
+img {
+  vertical-align: middle;
+}
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+  margin: 0px auto;
+}
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: black;
+  font-weight: bold;
+  font-size: 50px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/* Number text (1/3 etc) */
+.numbertext {
+  color: black;
+  font-size: 25px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+  font-size: 25px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 20%;
+}
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+<body class="w3-lightgrey">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <!-- <img src="li.jpg style="width:100%"> -->
+  <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-lightgrey">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="about.html" class="w3-bar-item w3-button w3-padding-large w3-hover-lightgrey">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>ABOUT</p>
+  </a>
+  <a href="product.html" class="w3-bar-item w3-button w3-padding-large w3-hover-lightgrey">
+    <i class="fa fa-phone w3-xxlarge"></i>
+    <p>PRODUCT</p>
+  </a>
+  <!-- <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-lightgrey">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>CONTACT</p> -->
+  </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<!-- <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-lightgrey w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
+  </div>
+</div> -->
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-lightgrey" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small"></span> PING!</h1>
+    <p>International Notifcation Platform</p>
+    <img src="hello.jpg" alt="boy" class="w3-image" width="300" height="308">
+  </header>
+  <div class="w3-content w3-justify w3-text-grey w3-padding-50" id="about">
+      <h2 class="w3-text-black">How to Use Ping!</h2>
+      <hr style="width:300px" class="w3-opacity">
+      <p>To access PING the number you have to text is 646-768-8479 and by a simple reply of “Subscribe” that will allow you to be subscribed and notified if there is anything happening near your location. This automatic number system will help alert people for preparations due to severe weather conditions.To stop receiving messages just type in "Stop" To not receive messages and to continue start receiving just type in "Start" to continue getting the messages.</p>
+
+    <!-- <h2 class="w3-text-black">Our Mission</h2>
+    <hr style="width:300px" class="w3-opacity">
+    <p>Our group looks to create a platform using the twilio API to help individuals living in third world/ underdeveloped countries stay informed and alert by sending messages. We plan to develop a system where we can send certain individuals messages (ex: when the next food/water/medical shipment from Unicef will arrive, if there are weather conditions that could be dangerous, or even nearby attacks) so people can be quickly updated on extremely important information. Furthermore, these messages would be based on the certain individuals location.
+    </p> -->
+    <!-- <h3 class="w3-padding-16 w3-text-black">About The Creators</h3>
+    <p class="w3-wide">Liel Ezroni</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:95%"></div>
+    </div>
+    <p class="w3-wide">Sandy</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:95%"></div>
+    </div>
+    <p class="w3-wide">Sarker</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:95%"></div>
+    </div> -->
+<br>
+<br>
+
+
+<center><font size = "6"><p style= "color:black"> How to Use PING!:</p></font size></center><center><font size = "3"><p style= "color:black">Click through the images below to see how to use PING!</p></font size></center>
+
+<p>
+
+</p>
+    <div class="container">
+      <div class="mySlides">
+        <div class="numbertext">1 / 5</div>
+        <center><img src="1.JPG" style="width:30%"></center>
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">2 / 5</div>
+        <center><img src="2.JPG" style="width:30%"></center>
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">3 / 5</div>
+        <center><img src="3.JPG" style="width:30%"></center>
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">4 / 5</div>
+        <center><img src="4.JPG" style="width:30%"></center>
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">5 / 5</div>
+        <center><img src="6.JPG" style="width:30%"></center>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <img class="demo cursor" src="1.JPG" style="width:100%" onclick="currentSlide(1)" alt="Step 1: Send a new message to: +1646 768-8479">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="2.JPG" style="width:100%" onclick="currentSlide(2)" alt="Step 2: Text anything to the number">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="3.JPG" style="width:100%" onclick="currentSlide(3)" alt="Step 3: Recieve a reply to subscribe to PING!">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="4.JPG" style="width:100%" onclick="currentSlide(4)" alt="Step 4: Text: Subscribe">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="6.JPG" style="width:100%" onclick="currentSlide(5)" alt="Step 5: Start recieving alerts">
+        </div>
+      </div>
+    </div>
+
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+    </script>
+
+
+
+
+
+</body>
+</html>
